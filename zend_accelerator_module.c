@@ -665,7 +665,7 @@ static ZEND_FUNCTION(opcache_reset)
 }
 
 /* {{{ proto bool opcache_script_cached(string $script)
-   Request that the contents of the opcode cache to be reset */
+   Return true if the script is cached in OPCache, false if not. */
 static ZEND_FUNCTION(opcache_script_cached)
 {
 	char *script_name;
