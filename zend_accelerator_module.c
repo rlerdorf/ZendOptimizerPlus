@@ -672,7 +672,7 @@ static ZEND_FUNCTION(opcache_script_cached)
 	int script_name_len;
 
 	if (!(ZCG(enabled) && (ZCG(counted) || ZCSG(accelerator_enabled)))) {
-		RETURN_FALSE
+		RETURN_FALSE;
 	}
 
 	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &script_name, &script_name_len) == FAILURE) {
